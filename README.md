@@ -1,6 +1,6 @@
-# Shai-Hulud Integrity Scanner
+# Sha1-Hulud 2  Integrity Scanner
 
-A script to scan Node.js projects for known vulnerabilities and suspicious patterns related to the Shai-Hulud
+A script to scan Node.js projects for known vulnerabilities and suspicious patterns related to the Sha1-Hulud 2
 supply-chain attack.
 
 ## What it does
@@ -34,7 +34,7 @@ The script requires a POSIX environment (Linux, macOS, or Windows with WSL2) and
 Execute the following curl INSIDE the project you want to analyze:
 
 ```bash
-    curl -s https://raw.githubusercontent.com/sngular/shai-hulud-integrity-scanner/refs/heads/main/scan-project.sh | bash /dev/stdin
+    curl -s https://raw.githubusercontent.com/gauthier-fox/sha1-hulud-integrity-scanner/refs/heads/main/scan-project.sh | bash /dev/stdin
 ```
 
 Or locally:
@@ -63,7 +63,7 @@ If you are on Windows and prefer to use the PowerShell version of the scanner (`
 1. **Download the script** into your project directory (or anywhere on your machine):
 
     ```powershell
-    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sngular/shai-hulud-integrity-scanner/refs/heads/main/scan-project.ps1" -OutFile "scan-project.ps1"
+    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/gauthier-fox/sha1-hulud-integrity-scanner/refs/heads/main/scan-project.ps1" -OutFile "scan-project.ps1"
     ```
 
 2. **Open PowerShell** (preferably PowerShell 7 / Windows Terminal for full UTF-8 and color support).
@@ -126,7 +126,7 @@ The script uses exit codes for automation:
 
 ```
 ==============================================
-      SHAI-HULUD DETECTION REPORT
+      SHA1-HULUD 2 DETECTION REPORT
 ==============================================
 
 🚨 HIGH RISK: Compromised Package Versions Detected
