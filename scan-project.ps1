@@ -48,8 +48,6 @@ $OutputEncoding = [System.Text.Encoding]::UTF8
 
 # === Constants ===
 $VERSION_LIST_URL = "https://raw.githubusercontent.com/gauthier-fox/sha1-hulud-integrity-scanner/refs/heads/main/compromised-libs.txt"
-$MALICIOUS_HASH = "46faab8ab153fae6e80e7cca38eab363075bb524edd79e42269217a083628f09"
-
 [string[]]$MALICIOUS_HASH = @(
     "46faab8ab153fae6e80e7cca38eab363075bb524edd79e42269217a083628f09",
     "de0e25a3e6c1e1e5998b306b7141b3dc4c0088da9d7bb47c1c00c91e6e4f85d6",
@@ -388,14 +386,95 @@ function Main
 
         # --- Constants Required by Jobs ---
 		$VERSION_LIST_URL = "https://raw.githubusercontent.com/gauthier-fox/sha1-hulud-integrity-scanner/refs/heads/main/compromised-libs.txt"
-        $MALICIOUS_HASH = "46faab8ab153fae6e80e7cca38eab363075bb524edd79e42269217a083628f09"
+		[string[]]$MALICIOUS_HASH = @(
+			"46faab8ab153fae6e80e7cca38eab363075bb524edd79e42269217a083628f09",
+			"de0e25a3e6c1e1e5998b306b7141b3dc4c0088da9d7bb47c1c00c91e6e4f85d6",
+			"81d2a004a1bca6ef87a1caf7d0e0b355ad1764238e40ff6d1b1cb77ad4f595c3",
+			"83a650ce44b2a9854802a7fb4c202877815274c129af49e6c2d1d5d5d55c501e",
+			"4b2399646573bb737c4969563303d8ee2e9ddbd1b271f1ca9e35ea78062538db",
+			"dc67467a39b70d1cd4c1f7f7a459b35058163592f4a9e8fb4dffcbba98ef210c",
+			"b74caeaa75e077c99f7d44f46daaf9796a3be43ecf24f2a1fd381844669da777",
+			"86532ed94c5804e1ca32fa67257e1bb9de628e3e48a1f56e67042dc055effb5b",
+			"aba1fcbd15c6ba6d9b96e34cec287660fff4a31632bf76f2a766c499f55ca1ee",
+			"62ee164b9b306250c1172583f138c9614139264f889fa99614903c12755468d0",
+			"a3894003ad1d293ba96d77881ccd2071446dc3f65f434669b49b3da92421901a",
+		)
+		
+		[string[]]$COMPROMISED_NAMESPACES = @(
+		   "@accordproject",
+			"@actbase",
+			"@afetcan",
+			"@alaan",
+			"@alexadark",
+			"@alexcolls",
+			"@antstackio",
+			"@aryanhussain",
+			"@asyncapi",
+			"@bdkinc",
+			"@browserbasehq",
+			"@caretive",
+			"@chtijs",
+			"@clausehq",
+			"@cllbk",
+			"@commute",
+			"@dev-blinq",
+			"@elsedev",
+			"@ensdomains",
+			"@everreal",
+			"@faq-component",
+			"@fishingbooker",
+			"@hapheus",
+			"@hover-design",
+			"@huntersofbook",
+			"@hyperlook",
+			"@ifelsedeveloper",
+			"@ifings",
+			"@jayeshsadhwani",
+			"@kvytech",
+			"@lessondesk",
+			"@livecms",
+			"@lokeswari-satyanarayanan",
+			"@louisle2",
+			"@lpdjs",
+			"@lui-ui",
+			"@markvivanco",
+			"@mcp-use",
+			"@micado-digital",
+			"@mizzle-dev",
+			"@mparpaillon",
+			"@ntnx",
+			"@oku-ui",
+			"@orbitgtbelgium",
+			"@osmanekrem",
+			"@pergel",
+			"@posthog",
+			"@postman",
+			"@pradhumngautam",
+			"@productdevbook",
+			"@pruthvi21",
+			"@quick-start-soft",
+			"@relyt",
+			"@sameepsi",
+			"@seezo",
+			"@seung-ju",
+			"@silgi",
+			"@sme-ui",
+			"@strapbuild",
+			"@suraj_h",
+			"@thedelta",
+			"@tiaanduplessis",
+			"@trackstar",
+			"@trefox",
+			"@trigo",
+			"@trpc-rate-limiter",
+			"@varsityvibe",
+			"@viapip",
+			"@vishadtyagi",
+			"@voiceflow",
+			"@vucod",
+			"@zapier"
+		)
 
-        [string[]]$COMPROMISED_NAMESPACES = @(
-            "@crowdstrike", "@art-ws", "@ngx", "@ctrl", "@nativescript-community",
-            "@ahmedhfarag", "@operato", "@teselagen", "@things-factory", "@hestjs",
-            "@nstudio", "@basic-ui-components-stc", "@nexe", "@thangved", "@tnf-dev",
-            "@ui-ux-gang", "@yoobic"
-        )
         [string[]]$GCI_EXCLUDES = @("*.md", "*.d.ts")
         [string[]]$GCI_EXCLUDE_DIRS = @("node_modules", ".git")
 
